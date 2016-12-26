@@ -1,0 +1,406 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link href="./stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" />
+   <!-- <script src="js/lib/jquery-1.11.1.min.js"></script>-->
+    <script src="js/jquery-1.11.3.min.js"></script>
+    <script type="text/javascript" src="js/lib/raphael-min.js"></script>
+
+    <script type="text/javascript" src="js/res/chinaMapConfig.js"></script>
+
+    <script type="text/javascript" src="js/map-min.js"></script>
+    <style>
+
+    /*    *{margin:0;padding:0;border: none;}*/
+
+
+       /* body { color: #333; text-align: center; font: 12px "微软雅黑";background-color: #dcf5ed; }*/
+    .itemCon{
+        margin-top: 730px;
+        margin-left: 200px;
+    }
+        .mapTipText{width: 240px;height:135px;background-color: white;}
+
+        .mapTipText .mapTipImg{height: 66px; width: 66px; float: left;border: 2px solid #ffffff; border-radius: 50%;overflow: hidden;margin: -12px 5px 0 -12px;}
+
+        .mapTipText .mapTipImg img{width: 100%;height: 100%;}
+
+        .mapTipText .mapTipList{float: left;margin-left: 4px;}
+
+        .mapTipText .mapTipList h2{text-align: left;}
+
+        .mapTipText .mapTipList h2 a{font-size: 24px; color: #262626;text-decoration:none;}
+
+        .mapTipText .mapTipList h2 a:hover{ color: #0085d2;}
+
+        .mapTipText .mapTipList h2 a span{font-size: 16px;margin-left: 3px;}
+
+        .mapTipText .mapTipList ul{ width: 203px;padding-right: 10px;}
+
+        .mapTipText .mapTipList ul li{list-style: none;float: left;padding: 7px 3px 0 3px;}
+
+        .mapTipText .mapTipList ul li a{color: #262626;text-decoration:none;}
+
+        .mapTipText .mapTipList ul li a:hover{background-color:#2ebcfe;color:#ffffff;}
+
+    .mapTipList .top{
+       width: 222px;
+        height: 45px;
+        border-bottom: 1px #ccc solid;
+        line-height: 45px;
+        margin-left: 10px;
+
+    }
+    .mapTipList   .left{
+          font-size: 18px;
+        color: black;
+        font-weight: 900;
+
+    }
+    .mapTipList  .right{
+
+    }
+    .mapTipList   .bottom{
+    width: 100%;
+        height: 70px;
+    }
+    .mapTipList   .img{
+    width: 70px;
+        height: 70px;
+        margin-left: 8px;
+        margin-top: 8px;
+    }
+
+    </style>
+    <script type="text/javascript">
+
+        $(function(){
+
+            $('#ChinaMap').SVGMap({
+
+                mapWidth: 876,
+
+                mapHeight: 765,
+                stateHoverColor: '#ca0821',
+                tipWidth: 240,      //展示内容（白色区域）宽度（单位：px）
+
+                tipHeight: 135
+            });
+
+        });
+
+    </script>
+
+
+</head>
+<div class="east-red-box"> <!--最大的大盒子-->
+    <div class="head-banner">
+        <ul class="introduce-company clearfix">
+            <li class="fl watch1">
+                <div class="top eastLogo-watch-1"></div>
+                <div class="bottom">
+                    有一种投资奇迹
+                    叫复利，
+                    有一种坚持
+                    叫长期价值投资。</div>
+            </li>
+
+            <li class="fl  watch2">
+                <div class="top eastLogo-watch-2"></div>
+                <div class="bottom">
+                    投资的本质源于
+                    未来的不确定性，
+                    长期价值投资胜在
+                    坚持做大概率的事。</div>
+            </li>
+            <li class="fl  watch13">
+                <div class="top eastLogo-watch-3"></div>
+                <div class="bottom">
+                    团队一直坚持长期价值投资，
+                    追求绝对收益，
+                    致力于精选"  <span>幸运的行业+能干的管理层+合理的估值</span>"三者兼具
+                    的投资标的。</div>
+            </li>
+            <li class="fl  watch4">
+                <div class="top eastLogo-watch-4"></div>
+                <div class="bottom">
+                    2015年8月开始启动的" <span>东方红
+                              万里行</span>"系列活动，致力于共同
+                    倡导长期价值投资，与投资者
+                    分享价值投资经验，全力支持
+                    您的财富梦想!
+                </div>
+            </li>
+
+        </ul>
+        <ul class="introduce-company clearfix">
+            <li class="fl watch1">
+                <div class="top eastLogo-watch-1"></div>
+                <div class="bottom">
+                    有一种投资奇迹
+                    叫复利，
+                    有一种坚持
+                    叫长期价值投资。</div>
+            </li>
+
+            <li class="fl  watch2">
+                <div class="top eastLogo-watch-2"></div>
+                <div class="bottom">
+                    投资的本质源于
+                    未来的不确定性，
+                    长期价值投资胜在
+                    坚持做大概率的事。</div>
+            </li>
+            <li class="fl  watch13">
+                <div class="top eastLogo-watch-3"></div>
+                <div class="bottom">
+                    团队一直坚持长期价值投资，
+                    追求绝对收益，
+                    致力于精选"  <span>幸运的行业+能干的管理层+合理的估值</span>"三者兼具
+                    的投资标的。</div>
+            </li>
+            <li class="fl  watch4">
+                <div class="top eastLogo-watch-4"></div>
+                <div class="bottom">
+                    2015年8月开始启动的" <span>东方红
+                              万里行</span>"系列活动，致力于共同
+                    倡导长期价值投资，与投资者
+                    分享价值投资经验，全力支持
+                    您的财富梦想!
+                </div>
+            </li>
+
+        </ul>
+        <ul class="introduce-company clearfix">
+            <li class="fl watch1">
+                <div class="top eastLogo-watch-1"></div>
+                <div class="bottom">
+                    有一种投资奇迹
+                    叫复利，
+                    有一种坚持
+                    叫长期价值投资。</div>
+            </li>
+
+            <li class="fl  watch2">
+                <div class="top eastLogo-watch-2"></div>
+                <div class="bottom">
+                    投资的本质源于
+                    未来的不确定性，
+                    长期价值投资胜在
+                    坚持做大概率的事。</div>
+            </li>
+            <li class="fl  watch13">
+                <div class="top eastLogo-watch-3"></div>
+                <div class="bottom">
+                    团队一直坚持长期价值投资，
+                    追求绝对收益，
+                    致力于精选"  <span>幸运的行业+能干的管理层+合理的估值</span>"三者兼具
+                    的投资标的。</div>
+            </li>
+            <li class="fl  watch4">
+                <div class="top eastLogo-watch-4"></div>
+                <div class="bottom">
+                    2015年8月开始启动的" <span>东方红
+                              万里行</span>"系列活动，致力于共同
+                    倡导长期价值投资，与投资者
+                    分享价值投资经验，全力支持
+                    您的财富梦想!
+                </div>
+            </li>
+
+        </ul>
+    </div>
+    <!-- 上面是头部-->
+    <!--活动盒子-->
+    <div class="activity-box">
+        <div class="tab-activity  clearfix">
+            <div class="pre fl eastLogo-right"></div>
+            <div class="next fr eastLogo-left-4 "></div>
+            <div class="center-box">
+                <span class="fl l on ">精彩活动</span>
+                <span class="fl r">遍布全国</span>
+            </div>
+        </div>
+
+
+
+<!--
+&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;
+-->
+
+
+
+
+
+
+        <!--
+ -&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;-->
+    </div>
+
+    <!--活动盒子-->
+
+</div><!--最大的大盒子-->
+
+
+<div class="itemCon" style="float: left">
+
+    <div id="ChinaMap" style="margin: 50px;"></div>
+
+    <div id="stateTip" style="position: absolute;left: 100%;text-align: left;display: inline;"></div>
+
+
+
+
+
+</div>
+
+<div id="mapTipContent" style="width: 900px;margin: 0 auto;display: none">
+
+    <div class="mapTipText mapTipText0">
+
+        <!--<div class="mapTipImg"><img src="images/heilongjiang.jpg" alt=""/></div>-->
+
+        <div class="mapTipList">
+            <div class="top">
+                <div class="fl left">江苏</div>
+                <div class="fr right"><span class="fl" style="color: #ca0821">25</span><span>次活动</span ><span class="fr eastLogo-map-icon" style="margin-top: 15px;margin-left: 5px"></span></div>
+
+            </div>
+            <div class="bottom">
+                <img class="img fl" src="./images/location-pic.png"  alt=""/>
+                <img class="img fl" src="./images/location-pic.png"  alt=""/>
+                <img class="img fl" src="./images/location-pic.png"  alt=""/>
+
+
+
+
+            </div>
+
+
+
+        </div>
+
+    </div>
+    <div class="mapTipText mapTipText1">
+
+        <!--<div class="mapTipImg"><img src="images/heilongjiang.jpg" alt=""/></div>-->
+
+        <div class="mapTipList">
+            <div class="top">
+                <div class="fl left">湖南</div>
+                <div class="fr right"><span class="fl" style="color: #ca0821">25</span><span>次活动</span ><span class="fr eastLogo-map-icon" style="margin-top: 15px;margin-left: 5px"></span></div>
+
+            </div>
+            <div class="bottom">
+                <img class="img fl" src="./images/location-pic.png"  alt=""/>
+                <img class="img fl" src="./images/location-pic.png"  alt=""/>
+                <img class="img fl" src="./images/location-pic.png"  alt=""/>
+
+
+
+
+            </div>
+
+
+
+        </div>
+
+    </div>
+    <div class="mapTipText mapTipText2">
+
+        <!--<div class="mapTipImg"><img src="images/heilongjiang.jpg" alt=""/></div>-->
+
+        <div class="mapTipList">
+            <div class="top">
+                <div class="fl left">上海</div>
+                <div class="fr right"><span class="fl" style="color: #ca0821">25</span><span>次活动</span ><span class="fr eastLogo-map-icon" style="margin-top: 15px;margin-left: 5px"></span></div>
+
+            </div>
+            <div class="bottom">
+                <img class="img fl" src="./images/location-pic.png"  alt=""/>
+                <img class="img fl" src="./images/location-pic.png"  alt=""/>
+                <img class="img fl" src="./images/location-pic.png"  alt=""/>
+
+
+
+
+            </div>
+
+
+
+        </div>
+
+    </div>
+
+    <div class="mapTipText mapTipText3">
+
+        <div class="mapTipImg"><img src="images/jilin.jpg" alt=""/></div>
+
+        <div class="mapTipList">
+
+        </div>
+
+    </div>
+
+    <div class="mapTipText mapTipText4">
+
+        <div class="mapTipImg"><img src="images/liaoning.jpg" alt=""/></div>
+
+        <div class="mapTipList">
+
+        </div>
+
+    </div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<body>
+
+<script>
+    //lert($);
+    var lastLine=$('#last-line');
+    var pre= $('.pre');
+    var  next=$('.next');
+    pre.bind('click',function(){
+        /* #ca0821*/
+        $('.l').addClass('on');
+        $('.r').removeClass('on');
+        // alert(1);
+    });
+    next.bind('click',function(){
+        /* #ca0821*/
+        $('.r').addClass('on');
+        $('.l').removeClass('on');
+    });
+    var  page=$('.east-page');
+    page.hide();
+    lastLine.hide()
+    var more=$('.search-more');
+    more.bind('click',function(){
+        more.remove();
+        page.show();
+        lastLine.show();
+
+    });
+
+
+
+
+
+</script>
+</body>
+</html>
